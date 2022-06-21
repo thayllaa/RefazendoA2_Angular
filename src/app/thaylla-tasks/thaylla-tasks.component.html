@@ -1,3 +1,6 @@
-<p>
-thaylla-tasks works!
-</p>
+<input type="text" [(ngModel)]="task" />
+<button (click)="cadastrarTarefa()"> Cadastrar </button>
+
+<ul>
+  <li *ngFor="let task of listarTarefas(); index as i"></li>
+</ul>
