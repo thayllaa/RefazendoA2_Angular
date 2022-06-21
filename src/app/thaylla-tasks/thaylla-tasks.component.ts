@@ -7,9 +7,22 @@ import { ThayllaTasksService } from '../thaylla-tasks.service';
   styleUrls: ['./thaylla-tasks.component.css']
 })
 export class ThayllaTasksComponent implements OnInit {
+  task = '';
 
-  constructor(private thatllaService: ThayllaTasksService) { }
+  constructor(private thayllaService: ThayllaTasksService) { }
 
   ngOnInit() {
+  }
+
+  cadastrarTarefa() {
+    this.thayllaService.adicionar(this.task);
+  }
+
+  removerTarefa(index: number) {
+    this.thayllaService.remover(index);
+  }
+
+  listarTarefas() {
+    return this.thayllaService.mostrarLista();
   }
 }
