@@ -3,4 +3,5 @@
 
 <ul>
   <li *ngFor="let task of listarTarefas(); index as i"></li>
+  {{ task }} <button (click)="removerTarefa(i)"> X </button>
 </ul>
